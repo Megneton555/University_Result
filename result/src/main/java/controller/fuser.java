@@ -25,15 +25,12 @@ public class fuser extends HttpServlet {
 			daoltr d = new daoltr();
 			List<dtoltr> l = d.fetchall();
 			req.setAttribute("saqu", l);
-			RequestDispatcher rd= req.getRequestDispatcher("fetchuser.jsp");
+			RequestDispatcher rd = req.getRequestDispatcher("fetchuser.jsp");
 			rd.forward(req, resp);
 
+		} else {
+			resp.getWriter().print("<h1 style='color:red; position: absolute; top:40%; left:43%; z-index: 10; font-size: 25px;'>Inavlid Password</h1>");
+			req.getRequestDispatcher("fuser.html").include(req, resp);
 		}
-		else
-		{
-			resp.getWriter().print("<h1>Incorrect Password</h1>");
-		}
-
 	}
-
 }

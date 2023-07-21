@@ -19,8 +19,8 @@ public class signup extends HttpServlet {
 		if (pd.equals("123")) {
 			resp.sendRedirect("signup2.html");
 		} else {
-			resp.getWriter().print("<h1>wrong password</h1>");
+			resp.getWriter().print("<h1 style='color:red; position: absolute; z-index: 10; margin: 20% 0 0 43%; font-size: 25px; '>Inavlid Password</h1>");
+			req.getRequestDispatcher("signup.html").include(req, resp);
 		}
-
 	}
 }

@@ -2,61 +2,61 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-
-<form action="insertt" method="post">
-<table border="">
-<tr>
-<th>USN</th>
-<th><input type="text" name="usn"></th>
-</tr>
-<tr>
-<td>name</td>
-<td><input type="text" name="name"></td>
-</tr>
-
-<tr>
-<td>date</td>
-<td><input type="date" name="date"></td>
-</tr>
-
-<tr>
-<td>mother name</td>
-<td><input type="text" name="mname"></td>
-</tr>
-
-<tr>
-<td>kannada</td>
-<td><input type="text" name="kan"></td>
-</tr>
-
-<tr>
-<td>english</td>
-<td><input type="text" name="eng"></td>
-</tr>
-
-<tr>
-<td>hindi</td>
-<td><input type="text" name="hin"></td>
-</tr>
-
-<tr>
-<td>Science</td>
-<td><input type="text" name="scs"></td>
-</tr>
-
-<tr>
-<td>Maths</td>
-<td><input type="text" name="mat"></td>
-</tr>
-
-<button>submit</button>
-
-
-</form>
-</body>
+  <head>
+  <meta charset="ISO-8859-1">
+  <title>Form</title>
+  <link rel="stylesheet" href="css/insert.css">
+  </head>
+    <body>
+        <div class="container">
+            <div class="wrapper">
+                <div class="content-heading">
+                    <h2>Fill the <div>Details</div></h2>
+                </div>
+                <div class="form">
+                    <form action="insertt" method="post">
+                        <p class="input-field">
+                            <input type="text" name="usn" required>
+                            <label>USN</label>
+                        </p>  
+                        <p class="input-field">
+                            <input type="text" name="name" required>
+                            <label>Name</label>
+                        </p>    
+                        <p class="input-field">
+                            <input type="date" name="date" required>
+                            <span>Date</span>
+                        </p>  
+                        <p class="input-field">
+                            <input type="text" name="mname" required>
+                            <label>Mother name</label>
+                        </p>  
+                        <p class="input-field">
+                            <input type="text" name="kan" required>
+                            <label>kannada</label>
+                        </p>  
+                        <p class="input-field">
+                            <input type="text" name="eng" required>
+                            <label>English</label>
+                        </p>  
+                        <p class="input-field">
+                            <input type="text" name="hin" required>
+                            <label>Hindi</label>
+                        </p>  
+                        <p class="input-field">
+                            <input type="text" name="scs" required>
+                            <label>Science</label>
+                        </p>  
+                        <p class="input-field">
+                            <input type="text" name="mat" required>
+                            <label>Mathematics</label>
+                        </p>  
+                        <p class="input-field">
+                            <button>submit</button>
+                        </p>  
+                    </form>
+                </div>    
+            </div>
+        </div>    
+    </body>
 </html>

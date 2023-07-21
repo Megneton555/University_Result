@@ -23,6 +23,5 @@ public class Update extends HttpServlet {
 		req.setAttribute("sad", ds);
 		RequestDispatcher rd = req.getRequestDispatcher("upd.jsp");
 		rd.include(req, resp);
-
 	}
 }

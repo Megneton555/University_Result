@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<form action="fetch" method="get">
-USN: <input type="text" name="usn">
-<button>submit</button>
-
-</form>
-</body>
+  <head>
+  <meta charset="ISO-8859-1">
+  <title>Fetch</title>
+  <link rel="stylesheet" href="css/fetch.css">
+  </head>
+  <body>
+        <div class="container" style="background-image: url(./Images/banner-8.jpg);">
+            <div class="conatiner__overlay">
+                <div class="wrapper">
+                    <div class="content-heading">
+                        <h2>Enter University Sheet Number</h2>
+                    </div>
+                    <form action="fetch" method="get">
+                        <p class="input-field">
+                          <label>USN</label> 
+                          <input onclick="bg_blur()" type="text" name="usn" required>
+                        </p>
+                        <p class="input-field">
+                          <button>submit</button>
+                        </p>
+                    </form>
+                </div>    
+            </div>     
+        </div>
+        <script>
+            function bg_blur(){
+            const blur=document.querySelector(".conatiner__overlay");
+            blur.classList.add("active");
+            }
+        </script>
+    </body>
 </html>

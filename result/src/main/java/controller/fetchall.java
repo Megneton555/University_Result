@@ -37,8 +37,4 @@ daostd d = new daostd();
 
 		rd.include(req, resp);
 	}
-		
-
-	
-
 }

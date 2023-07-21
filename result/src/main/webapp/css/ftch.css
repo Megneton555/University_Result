@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400;500&family=Josefin+Sans:ital,wght@0,100;0,200;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans&family=Poppins:wght@400;500;600&display=swap');
+
+
+:root{
+    --main-color: #0000b8;
+    --secondary-color:#ffffff;
+    --light-color: #003ae9;
+}
+
+
+body{
+	margin: 0;
+	padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+table{
+    border-collapse: collapse;
+    margin: auto;
+    height: 200px;
+    width: 50%;
+}
+
+
+th{
+    font-family: system-ui;
+    padding: 20px 30px;
+    text-align: start;
+}
+
+
+
+td{
+    font-family: system-ui;
+    padding: 10px 30px;
+}
+
+.print{
+    height: 35px;
+    width: 75px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: var(--secondary-color);
+    position: absolute;
+    bottom: 50px;
+    background: var(--main-color);
+    border: none;
+    font-family: system-ui;
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}

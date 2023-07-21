@@ -25,6 +25,5 @@ public class dtoltr {
 	}
 	public void setDept(String dept) {
 		this.dept = dept;
-	}
-	
+	}	
 }

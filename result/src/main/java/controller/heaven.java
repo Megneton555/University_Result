@@ -11,49 +11,41 @@ import javax.servlet.http.HttpServletResponse;
 import dao.daostd;
 
 @WebServlet("/heaven")
-public class heaven extends HttpServlet{
-@Override
-protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	// TODO Auto-generated method stub
-	//super.doPost(req, resp);
-	String us=req.getParameter("usn");
-	String date=req.getParameter("date");
+public class heaven extends HttpServlet {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		// super.doPost(req, resp);
+		String us = req.getParameter("usn");
+		String date = req.getParameter("date");
 
-	String eng=req.getParameter("eng");
-	int eng1=Integer.parseInt(eng);
+		String eng = req.getParameter("eng");
+		int eng1 = Integer.parseInt(eng);
 
-	String hin=req.getParameter("hin");
-	int hin1=Integer.parseInt(hin);
+		String hin = req.getParameter("hin");
+		int hin1 = Integer.parseInt(hin);
 
+		String kan = req.getParameter("kan");
+		int kan1 = Integer.parseInt(kan);
 
-	String kan=req.getParameter("kan");
-	int kan1=Integer.parseInt(kan);
+		String mat = req.getParameter("mat");
+		int mat1 = Integer.parseInt(mat);
 
+		String mname = req.getParameter("mname");
 
-	String mat=req.getParameter("mat");
-	int mat1=Integer.parseInt(mat);
+		String name = req.getParameter("name");
 
+		String scs = req.getParameter("scs");
+		int scs1 = Integer.parseInt(scs);
 
-	String mname=req.getParameter("mname");
+		int ttl = scs1 + mat1 + kan1 + hin1 + eng1;
+		double prc = ttl * 100 / 500;
+		daostd d = new daostd();
+		String as = d.update(us, date, eng1, hin1, kan1, mat1, mname, name, scs1, ttl, prc);
 
-	String name=req.getParameter("name");
-
-	String scs=req.getParameter("scs");
-	int scs1=Integer.parseInt(scs);
-	
-	int ttl=scs1+mat1+kan1+hin1+eng1;
-	double prc=ttl*100/500;
-	daostd d=new daostd();
-	String as=d.update(us, date, eng1, hin1, kan1, mat1, mname, name, scs1, ttl, prc);
-	
-	if(as.equals("upd"))
-	{
-		resp.getWriter().print("<h2>Successfully Updated</h2>");
+		if (as.equals("upd")) {
+			resp.getWriter().print("<h1 style='color: #27d927; position: absolute; top: 22%; left: 42%; z-index: 10; font-size: 22px; word-spacing: 2px;'>Updated successfully</h1>");
+			req.getRequestDispatcher("option.html").include(req, resp);
+		}
 	}
-	
-
-
-
-	
-}
 }

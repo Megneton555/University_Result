@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<form action="pwd" method="post">
-email: <input type="email" name="email">
-passowrd: <input type="text" name="pwd">
-confirm pwd: <input type="text" name="pwd2">
-Department: <input type="text" name="dep">
-<button>submit</button>
-</form>
-</body>
+  <head>
+  <meta charset="ISO-8859-1">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="css/signup2.css">
+  </head>
+    <body>
+        <div class="conatiner">
+            <div class="wrapper">
+                <div class="content-heading">
+                    <h2>Sign Up<div>Now!</div></h2>
+                </div>
+                <div class="register-form">
+                    <form action="pwd" method="post">
+                        <p class="input-field">  
+                            <input type="email" name="email" required>
+                            <label>Email</label>
+                        </p>
+                        <p class="input-field">
+                            <input type="password" name="pwdd" required>
+                            <label>Password</label>
+                        </p>
+                        <p class="input-field">
+                            <input type="password" name="pwd2" required>
+                            <label>Confirm password</label> 
+                        </p>
+                        <p class="input-field">
+                            <input type="text" name="dep" required>
+                            <label>Department</label> 
+                        </p>
+                        <p class="input-field">
+                            <button>submit</button>
+                        </p>   
+                    </form>
+                </div>    
+            </div>
+        </div>   
+    </body>
 </html>

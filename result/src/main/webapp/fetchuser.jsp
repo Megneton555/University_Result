@@ -6,13 +6,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Users</title>
+<link rel="stylesheet" href="css/fetchuser.css">
 </head>
 <body>
 <%List<dtoltr> l=(List<dtoltr>)request.getAttribute("saqu");%>
-<table border="">
-<tr>
-<th>email</th>
+<table border="1px">
+<tr bgcolor="lightgreen">
+<th>Email</th>
 <th>PWD</th>
 <th>Department</th>
 <th>Delete</th>
@@ -22,7 +23,7 @@
 <td><%=d.getEmail()%></td>
 <td><%=d.getPassword()%></td>
 <td><%=d.getDept()%></td>
-<td><a href="removeuser?el=<%=d.getEmail()%>">remove</a></td>
+<td><a href="removeuser?el=<%=d.getEmail()%>"><button>remove</button></a></td>
 </tr>
 <%}%>
 </table>

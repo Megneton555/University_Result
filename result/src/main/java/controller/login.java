@@ -36,7 +36,8 @@ public class login extends HttpServlet {
 			h.setAttribute("dp", dept);
 			h2.setAttribute("dpp", dept);
 		} else {
-			resp.getWriter().print("<h1>email doesnot exist <a href='signup.html'> click here </a> to signup</h1>");
+			resp.getWriter().print("<h1 style='color:red; position: absolute; top: 16%; left: 54.4%; font-size: 20px; word-spacing: 2px;'>Invalid Email</h1>");
+			req.getRequestDispatcher("login.html").include(req, resp);
 
 		}
 
@@ -44,10 +45,9 @@ public class login extends HttpServlet {
 			if (ds.getPassword().equals(pd)) {
 				resp.sendRedirect("option.html");
 			} else {
-				resp.getWriter().print("<h1>incorrect password</h1>");
+				resp.getWriter().print("<h1 style='color:red; position: absolute; top: 16%; left: 54.4%; font-size: 20px; word-spacing: 2px;'>Invalid password</h1>");
+				req.getRequestDispatcher("login.html").include(req, resp);
 			}
-
 		}
-
 	}
 }

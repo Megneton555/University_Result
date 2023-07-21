@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400;500&family=Josefin+Sans:ital,wght@0,100;0,200;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans&family=Poppins:wght@400;500;600&display=swap');
+
+
+:root{
+    --main-color: #0000b8;
+    --secondary-color:#ffffff;
+    --light-color: #003ae9;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.conatiner__overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content-heading{
+    font-size: 33.5px;
+    color: var(--secondary-color);
+    margin-bottom: 0;
+    word-spacing: 5px;
+}
+
+
+.content-heading h2{
+    margin-top: 0;
+}
+
+
+.active{
+    height:100vh;
+    width: 100%;
+    backdrop-filter: blur(7px);
+    transition: .3s ease;
+}
+
+
+.wrapper{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+form{
+    height: 25vh;
+    width: 30%;
+}
+
+
+form .input-field{
+    display: flex;
+    flex-direction: column;
+}
+
+
+input{
+    font-size: 16px;
+    outline: none;
+    border: none;
+    color: var(--secondary-color);
+    font-family: 'Poppins';
+    background: transparent;
+    border-bottom: 3px solid var(--main-color);
+}
+
+
+label{
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+
+
+.input-field button{
+    height: 35px;
+    width: 70px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: var(--secondary-color);
+    position: relative;
+    top: 10px;
+    background: var(--main-color);
+    border: none;
+    font-family: inherit;
+    font-weight: 600;
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+
+.input-field button:hover{
+    color:var(--secondary-color);
+    background-color: var(--light-color);
+}
+
+
+input:focus{
+    border-bottom: 3px solid black;
+}

@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<form action="login">
-email: <input type="email" name="email">
-passowrd: <input type="password" name="pwdd">
-<button>submit</button>
-</form>
-</body>
+  <head>
+  <meta charset="ISO-8859-1">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="css/login.css">
+  <script src="https://kit.fontawesome.com/33fa74657a.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+        <div class="conatiner">
+            <div class="wrapper">
+                <div class="content-heading">
+                    <h2>Welcome
+                        <div>Back!</div>
+                    </h2>
+                </div>
+                <div class="login-form">
+                    <form action="login">
+                        <p class="input-field">  
+                          <input type="email" name="email" required>
+                          <label>Email</label>
+                        </p>
+                        <p class="input-field">
+                          <input type="password" name="pwdd" required>
+                          <label>Password</label>
+                        </p>
+                        <p class="sign">Or sign up with</p>
+                        <div class="social-media">
+                            <a class="ig" href="" ><i class="fa-brands fa-instagram"></i></a>
+                            <a class="fb" href="" ><i class="fa-brands fa-facebook-f" ></i></a>
+                            <a class="tw" href="" ><i class="fa-brands fa-twitter" ></i></a>
+                            <a class="gg" href="" ><i class="fa-brands fa-google" ></i></a>
+                        </div>
+                        <p class="input-field">
+                          <button>submit</button>
+                        </p>   
+                    </form>
+                </div>    
+            </div>
+        </div>   
+    </body>
 </html>

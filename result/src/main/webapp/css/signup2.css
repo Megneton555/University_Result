@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400;500&family=Josefin+Sans:ital,wght@0,100;0,200;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans&family=Poppins:wght@400;500;600&display=swap');
+
+
+:root{
+    --main-color: #0000b8;
+    --secondary-color:#ffffff;
+    --light-color: #003ae9;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.conatiner{
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #efefef;
+}
+
+
+.wrapper{
+    width: 46%;
+    height: 85vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--main-color);
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.45) 0 25px 20px -20px;
+}
+
+
+.content-heading{
+    font-size: 30px;
+    color: var(--secondary-color);
+    margin-right: 4.5rem;
+    position: relative;
+    top: 11rem;
+}
+
+
+.content-heading div{
+    transform: translateY(-8px);
+}
+
+
+.register-form{
+    width: 55%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+
+.register-form form{
+    width: 75%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+form .input-field{
+    width: 90%;
+    height: 55px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+input{
+    font-size: 15px;
+    outline: none;
+    border: none;
+    font-family: 'Poppins';
+    background: transparent;
+    border-bottom: 3px solid var(--main-color);
+    z-index: 1;
+}
+
+
+label{
+    font-size: 16px;
+    position: relative;
+    top: 22px;
+    transition: all .3s ease;
+}
+
+
+input:focus{
+    border-bottom: 3px solid black;
+}
+
+
+input:focus + label,
+input:valid + label{
+    transform: translateY(-26px);
+    color: var(--main-color);
+    font-size: 14px;
+}
+
+
+.input-field button{
+    height: 45px;
+    font-size: 15px;
+    border-radius: 8px;
+    color: var(--secondary-color);
+    background: var(--main-color);
+    border: none;
+    font-family: inherit;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+
+.input-field button:hover{
+    color:var(--secondary-color);
+    background-color: var(--light-color);
+}

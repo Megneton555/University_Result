@@ -15,23 +15,20 @@ import dto.dtostd;
 
 @WebServlet("/fetchallstudents")
 public class fetchallstudents extends HttpServlet {
-@Override
-protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	// TODO Auto-generated method stub
-	String pdd="123";
-	String pd=req.getParameter("password");
-	if(pd.equals(pdd))
-	{
-	daostd d=new daostd();
-	List<dtostd> s= d.fetchall();
-	req.setAttribute("stud", s);
-	RequestDispatcher rd=req.getRequestDispatcher("fallstud.jsp");
-	rd.forward(req, resp);
-	}
-	else
-	{
-		resp.getWriter().print("<h1>incorrect password try again</h1>");
-	}
-	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String pdd = "123";
+		String pd = req.getParameter("password");
+		if (pd.equals(pdd)) {
+			daostd d = new daostd();
+			List<dtostd> s = d.fetchall();
+			req.setAttribute("stud", s);
+			RequestDispatcher rd = req.getRequestDispatcher("fallstud.jsp");
+			rd.forward(req, resp);
+		} else {
+			resp.getWriter().print("<h1 style='color:red; position: absolute; top:40%; left:43%; z-index: 10; font-size: 25px;'>Inavlid Password</h1>");
+			req.getRequestDispatcher("pdd.html").include(req, resp);
+		}
 	}
 }
